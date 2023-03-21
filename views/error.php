@@ -1,10 +1,6 @@
-<html>
-    <head>
-        <title>
-            Erreur
-        </title>
-    </head>
-    <body>
-        <h1>ERREUR</h1>
-    </body>
-</html>
+<?php
+$title = "ERROR";
+$content = "<h1>ERROR $ERROR : {$ERROR_MESS[$ERROR]}</h1>";
+$content .= "<h2>Veuillez contacter le Webmaster :  $WEBMST</h2>";
+require "gabarit.php";
+?>

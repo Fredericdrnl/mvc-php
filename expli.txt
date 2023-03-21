@@ -1,7 +1,0 @@
-MVC 
-
-Models : Interaction avec la BDD
-
-Vue : Ce que l'on voit, (les pages webs)
-
-Controller : Met en relation le Models avec la Vue
