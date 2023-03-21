@@ -1,0 +1,10 @@
+<html>
+    <head>
+        <title>
+            Erreur
+        </title>
+    </head>
+    <body>
+        <h1>ERREUR</h1>
+    </body>
+</html>
