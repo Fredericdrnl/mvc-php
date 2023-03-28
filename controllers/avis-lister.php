@@ -3,13 +3,22 @@
 
     $offset = 0;
     $max = 10;
+    $changmaxlink = "";
   
-    if (isset($_GET['max'])){
-        $max = $_GET['max'];
-    } 
-
     if ((isset($_GET['offset'])) && (count_avis() > $_GET['offset'])){
         $offset = $_GET['offset'];
+    }
+
+    if (isset($_GET['changer'])) {
+        if (!($_GET['max'] == "")){
+            var_dump($_GET['max']);
+            $max = $_GET['max'];
+            $changmaxlink = 'http://localhost/php/semestre4/mvc-php/index.php?controller=avis-lister&max=' . $max . '&offset=' . $offset;
+        }
+    } else {
+        if (isset($_GET['max'])){
+            $max = $_GET['max'];
+        }
     }
 
     $precedent= $offset - $max;
