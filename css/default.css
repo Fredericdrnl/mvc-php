@@ -8,30 +8,25 @@ body {
 .tab {
     display: flex;
     color:black;
-    justify-content: center;
-    padding-right: 2%
 }
 
 .container {
     background-color: white;
-    width: 100%;
-    height: 50%;
     margin-top: 6%;
-    border-radius: 2%;
+    border-radius: 1.5%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     padding-bottom: 2%;
     padding-top: 0.2%;
-    width: 90%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 70%;
+    display: inline-block;
 }
 
 th {
     margin: 0px;
 }
 
-h3{
+
+h3 {
     color: black;
 }
 
@@ -39,12 +34,12 @@ h3{
     color: rgb(255, 255, 255);
     background-color: grey;
     height: 20px;
-    padding: 1.5%;
+    padding: 5%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     text-decoration: none;
     border-radius: 10%;
     margin-right: 2%;
-    padding-bottom: 3%;
+    padding-bottom: 5%;
 }
 
 a {
@@ -55,11 +50,15 @@ a {
     border-radius:5%;
 }
 
-.nav {
+.nav a{
     text-align: center;
     text-decoration: none;
     padding: 0px;
     height: 20px;
+    margin-bottom: 10%;
+    color : white;
+    background-color: grey;
+    padding: 3%;
 }
 
 input {
@@ -74,6 +73,7 @@ input {
     left: 50px;
     margin-top: 5%;
     margin-left: 1.5%;
+    height: 20%;
 }
 
 .max p {
@@ -103,4 +103,30 @@ input {
     background-color: gray;
     border-radius: 8%;
     color : white;
+}
+
+.commentaire {
+    padding-bottom: 10%;
+}
+
+.button-ajouter {
+    font-size: large;
+    background-color: grey;
+    color: white;
+    border: 0px;
+    border-radius: 4%;
+    padding: 1.5%;
+    margin-top: 2%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-bottom: 3%;
+}
+
+.ajouter {
+    background-color: grey;
+    color: white;
+    padding: 3%;
+    bottom: 3%;
+    display: block;
+    width: 40%;
+    justify-content: center;
 }

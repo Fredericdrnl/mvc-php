@@ -1,4 +1,5 @@
 <?php
+    $path = 'http://localhost/php/semestre4/mvc-php/index.php?controller=';
     require "models/avis-lister.php";
 
     $offset = 0;
@@ -13,7 +14,7 @@
         if (!($_GET['max'] == "")){
             var_dump($_GET['max']);
             $max = $_GET['max'];
-            $changmaxlink = 'http://localhost/php/semestre4/mvc-php/index.php?controller=avis-lister&max=' . $max . '&offset=' . $offset;
+            $changmaxlink = $path . 'avis-lister&max=' . $max . '&offset=' . $offset;
         }
     } else {
         if (isset($_GET['max'])){
@@ -28,8 +29,6 @@
     $suivant= $max + $offset;
     if ($suivant >= count_avis()[0]){
         $suivant = count_avis()[0] - $max;
-        // print_r(count_avis());
-        // print_r("coucou");
     }
     if (isset($_GET['tri'])){ 
         $avis = get_avis($_GET['tri'], $max, $offset);
