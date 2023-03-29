@@ -119,6 +119,7 @@ input {
     margin-top: 2%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding-bottom: 3%;
+    text-align: center;
 }
 
 .ajouter {
@@ -127,6 +128,15 @@ input {
     padding: 3%;
     bottom: 3%;
     display: block;
-    width: 40%;
-    justify-content: center;
+    margin-top: 48%;
+    margin-right: 2%;
+    width: 80%;
+}
+
+h2 {
+    color : white;
+}
+
+h1 {
+    color : white;
 }
