@@ -3,23 +3,26 @@
 
     $title = 'Ajout avis';
 
-    $content = "<form class ='container' action='index.php?controller=avis-ajouter' method='POST'>";
+    $content = "<form class ='container' action='' method='post'>";
     $content .="<h3>Département</h3>";
-    $content .="<input type='text' placeholder='Département' class='text' name='departement'>";
+    $content .="<input type='text' placeholder='Département' id='departement' class='text' name='departement'>";
 
     $content .="<h3>Promo</h3>";
-    $content .="<input type='text' placeholder='Promo' class='text' name='promo'>";
+    $content .="<input type='text' placeholder='Promo' id='promo' class='text' name='promo'>";
 
     $content .="<h3>Module</h3>";
-    $content .="<input type='text' placeholder='Module' class='text' name='module'>";
+    $content .="<input type='text' placeholder='Module' id='module' class='text' name='module'>";
 
     $content .="<h3>Note</h3>";
-    $content .="<input type='text' placeholder='Note' class='text' name='note'>";
+    $content .="<input type='text' placeholder='Note' id='note' class='text' name='note'>";
+
+    $content .="<h3>Etudiant</h3>";
+    $content .="<input type='text' placeholder='etudiant' id='etudiant' class='text' name='etudiant'>";
 
     $content .="<h3>Commentaire</h3>";
-    $content .="<input  class = 'commentaire' type='text' placeholder='Commentaire' class='text' name='commentaire'>";
+    $content .="<input  class = 'commentaire' type='text' id='commentaire' placeholder='Commentaire' class='text' name='commentaire'>";
     
-    $content .="<p><input class='button-ajouter' type='submit' value='Ajouter' name='ajouter'></p>";
+    $content .="<p><input class='button-ajouter' type='submit' value='Ajouter' name='submit'></p>";
 
     $content .="</form>";
 

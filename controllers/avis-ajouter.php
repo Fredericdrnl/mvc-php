@@ -1,31 +1,20 @@
 <?php
-    // $departement = '';
-    // $promo = '';
-    // $module = '';
-    // $note = '';
-    // $commentaire = '';
-    // $etudiant = '';
-    // $datecomm = '';
-    // require("./models/avis-ajouter.php");
-    // if ($_SERVER['add_avis'] == 'POST') {
-    //     require("./views/avis-ajouter.php");
-    // }
-    // if (isset($_POST['ajouter'])){
-    //     $departement = $_POST['departement'];
-    //     $promo = $_POST['promo'];
-    //     $module = $_POST['module'];
-    //     $note = $_POST['note'];
-    //     $commentaire = $_POST['note'];
-    //     $etudiant = $_POST['etudiant'];
-    //     $datecomm = $_POST['datecomm'];
-    //     if (add_avis($departement, $promo, $module, $note, $commentaire, $etudiant, $datecomm) == 4) {
-    //         $ERROR = 4;
-    //         require("./views/error.php");
-    //     } else {
-    //         add_avis($departement, $promo, $module, $note, $commentaire, $etudiant, $datecomm);
-    //         require("./views/avis-lister.php");
-    //     }
-    // }
+    if($_SERVER['REQUEST_METHOD'] === "GET"){
+        var_dump("GET");
+        include "views/avis-ajouter.php"; 
+    } elseif($_SERVER['REQUEST_METHOD'] === "POST"){
+        foreach($_POST as $key => $value) {
+            if(!isset($value)){
+                $ERROR = 2;               
+                include "views/error.php";
+                return;
+            }
+        }
+        require("models/avis-ajouter.php");
+        $req = add_avis($_POST['departement'], $_POST['promo'], $_POST['module'], $_POST['note'], $_POST['commentaire'], $_POST['etudiant']);
+        if($req == 0){
+            var_dump("POST");
+            require("views/avis-lister.php");
+        }
+    }
 ?>
-
-
