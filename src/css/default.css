@@ -121,10 +121,10 @@ input {
     color: white;
     border: 0px;
     border-radius: 4%;
-    padding: 1.5%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding-bottom: 3%;
     text-align: center;
+    padding-top: 2%;
 }
 
 .ajouter {
