@@ -22,7 +22,7 @@
     $content .="<h3>Commentaire</h3>";
     $content .="<input  class = 'commentaire' type='text' id='commentaire' placeholder='Commentaire' class='text' name='commentaire'>";
     
-    $content .="<p><input class='button-ajouter' type='submit' value='Ajouter' name='submit'></p>";
+    $content .="<p><input class='button-ajouter' type='submit' value='Ajouter'></p>";
 
     $content .="</form>";
 

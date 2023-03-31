@@ -4,5 +4,5 @@
     $DBDRIVER = 'pgsql';
     $DBNAME = 'rating';
     $DBUSER = 'fred';
-    $DBPASSWORD = 'Foot2562';
+    $DBPASSWORD = 'foot2562';
 ?>

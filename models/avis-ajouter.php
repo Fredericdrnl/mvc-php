@@ -14,10 +14,8 @@
             $request -> bindValue(':commentaire', $commentaire);
             $request->execute();
             return 0;
-            var_dump("coucou");
         } catch(PDOException $e) {
             return 2;
-            include("views/error.php");
         }
     }
 ?>
