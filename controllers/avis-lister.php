@@ -1,25 +1,20 @@
 <?php
-    $path = 'http://localhost/php/semestre4/mvc-php/index.php?controller=';
     require "models/avis-lister.php";
 
     $offset = 0;
     $max = 10;
+    $departement = "";
+    $module = "";
     $changmaxlink = "";
   
     if ((isset($_GET['offset'])) && (count_avis() > $_GET['offset'])){
         $offset = $_GET['offset'];
     }
 
-    if (isset($_GET['changer'])) {
-        if (!($_GET['max'] == "")){
-            var_dump($_GET['max']);
-            $max = $_GET['max'];
-            $changmaxlink = $path . 'avis-lister&max=' . $max . '&offset=' . $offset;
-        }
-    } else {
-        if (isset($_GET['max'])){
-            $max = $_GET['max'];
-        }
+    if (isset($_POST['max'])){
+        $max = $_POST['max'];
+    } else if (isset($_GET['max'])) {
+        $max = $_GET['max'];
     }
 
     $precedent= $offset - $max;
@@ -30,10 +25,15 @@
     if ($suivant >= count_avis()[0]){
         $suivant = count_avis()[0] - $max;
     }
+
+    if (isset($_POST['departement'])){
+        $departement = $_POST['departement'];
+        $module = $_POST['module'];
+    }
     if (isset($_GET['tri'])){ 
-        $avis = get_avis($_GET['tri'], $max, $offset);
+        $avis = get_avis($_GET['tri'], $max, $offset, $departement, $module);
     } else {
-        $avis = get_avis('id', $max, $offset);
+        $avis = get_avis('id', $max, $offset, $departement, $module);
     }
 
     if ($ERROR == 0){

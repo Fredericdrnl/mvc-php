@@ -22,17 +22,16 @@
         }
         $content .= "</tr>";
     }
-    $content .= "</div></div>";
-    $content .= "<div class = 'param'><a class='link' href='" . $path . "avis-detail'>Voir plus</a>";
+    $content .= "</div></div><div class = 'param'><a class='link' href='" . $path . "avis-detail'>Voir plus</a>";
 
     $content .= "<ul class='nav'><a class = 'precedent' href='" .  $path . "avis-lister&max=" . $max . "&offset=" . $precedent ."'>Precedent</a>";
     
     $content .= "<a class = 'suivant' href ='" . $path . "avis-lister&max=" . $max . "&offset=" . $suivant ."'>Suivant</a></ul>";
     
-    $content .= "<div class = 'max'><form method='GET' action='index.php?controller=avis-lister&max=" . $max . "&offset=" . $offset ."'><input type='text' placeholder='Max' class='text' name='max'><a href=" . $changmaxlink . "><input class='button' type='submit' value='changer' name='changer'></form></div>";
+    $content .= "<div class = 'max'><form method='POST' action='index.php?controller=avis-lister&max=" . $max . "&offset=" . $offset ."'><input type='text' placeholder='Max' class='text' name='max'><a href='" . $path . "avis-lister&max=" . $max . "&offset=" . $offset ."'><input class='button' type='submit' value='changer' name='changer'></a></form></div>";
 
-    $content .= "<p>Département</p><form method='GET' action='index.php?controller=avis-lister&max=" . $max . "&offset=" . $offset ."'><select name='departement' class='select'><option value=''></option><option value='INFO'>INFO</option><option value='GEA'>GEA</option></select>";
-    $content .= "<p>Module</p><form method='GET' action='index.php?controller=avis-lister&max=" . $max . "&offset=" . $offset ."'><select name='modules' class='select'><option value=''></option><option value='C++'>C++</option><option value='DROIT'>DROIT</option><option value='elexir'>elexir</option><option value='Finance'>Finance</option><option value='Mathématiques'>Mathématiques</option><option value='PHP'>PHP</option></select></form>";
+    $content .= "<p>Département</p><form method='POST' action='index.php?controller=avis-lister&max=" . $max . "&offset=" . $offset ."'><select name='departement' class='select'><option value='' name=''></option><option value='INFO' name='INFO'>INFO</option><option value='GEA' name='GEA'>GEA</option></select>";
+    $content .= "<p>Module</p><form method='POST' action='index.php?controller=avis-lister&max=" . $max . "&offset=" . $offset ."'><select name='module' class='select'><option value=''></option><option value='C++'>C++</option><option value='DROIT'>DROIT</option><option value='elexir' name='elexir'>elexir</option><option value='Finance' name='Finance'>Finance</option><option value='Mathématiques' name='Mathématiques'>Mathématiques</option><option value='PHP' name='PHP'>PHP</option></select> <input class='button' type='submit' value='changer' name='changer'></form>";
 
     $content .= "<a class='ajouter' href='" . $path . "avis-ajouter'>Ajouter</a></div>";
     

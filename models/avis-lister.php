@@ -16,13 +16,23 @@ function check_array($array){
     }
     }
 
-function get_avis($tri='id', $max, $offset){
+function get_avis($tri='id', $max, $offset, $departement='', $module=''){
     $validTri = check_array($tri);
     if ($validTri == 0){
         $db = connect();
 
         if (!$db == null){
-            $r = $db->query('SELECT * FROM avis ORDER BY ' . $tri . ' LIMIT ' . $max . ' OFFSET ' . $offset . ';');
+            $where = "";
+            if (!($departement =='') && !($module =='')){
+                $where = "WHERE departement ILIKE '" . $departement . "' AND module ILIKE '" . $module . "'";  
+            } else {
+                if (!($departement =='')) {
+                    $where = "WHERE departement ILIKE '" . $departement . "'";
+                } else if (!($module =='')) {
+                    $where = "WHERE module ILIKE '" . $module . "'";    
+                }
+            }
+            $r = $db->query('SELECT * FROM avis ' . $where . ' ORDER BY ' . $tri . ' LIMIT ' . $max . ' OFFSET ' . $offset . ';');
             $avis = $r->fetchAll();
             return $avis;   
         } else {

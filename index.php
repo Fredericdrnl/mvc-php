@@ -6,6 +6,4 @@
         $ERROR = 1;
         require "controllers/error.php"; 
     }
-
-
 ?>
