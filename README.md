@@ -19,4 +19,8 @@ For this project, I use PHP with Postgresql database.
 
 - First of all, create postgresql database with the commands on the *bdd.sql* file.
 - Then change the *$path* variable on the *path.php* file and also add your postgresql id on the *models/config-db.php*.
-- After for use this project you have to use the index.html page in your http request with on parameter ("controllers") the controller you want to see.
+- After for use this project you have to use the index.html page in your http request with on parameter ("controller") the controller you want to see.
+
+```
+http://localhost/php/semestre4/mvc-php/index.php?controller=[nameOfController]
+```
