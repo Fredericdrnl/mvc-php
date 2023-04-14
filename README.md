@@ -22,5 +22,5 @@ For this project, I use PHP with Postgresql database.
 - After for use this project you have to use the index.html page in your http request with on parameter ("controller") the controller you want to see.
 
 ```
-http://localhost/php/semestre4/mvc-php/index.php?controller=[nameOfController]
+http://localhost/mvc-php/index.php?controller=[nameOfController]
 ```
