@@ -1,4 +1,4 @@
-CREATE DATABASE rating WITH OWNER fred;
+CREATE DATABASE rating WITH OWNER ...;
 
 \c rating
 
@@ -9,7 +9,8 @@ CREATE TABLE rating(id SERIAL,
                     note integer CHECK (note BETWEEN 0 AND 5),
                     commentaire varchar,
                     etudiant varchar,
-                    datecomm date DEFAULT current_date);
+                    datecomm date DEFAULT current_date
+                    );
                     
 ALTER TABLE rating RENAME TO avis;
 
