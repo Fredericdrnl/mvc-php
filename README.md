@@ -2,7 +2,7 @@
 
 > Author : DOURNEL Frédéric
 
-## Aim of this project📍
+## Aim of this project 📍
 
 This project was made during my second years of Bachelor University of Tehnology. The goal was to discovered the MVC structure with le PHP language. With that, we make an SQL table and we showing data with a html table. In this HTML page, I make lot of tools for navigate on the project.
 
