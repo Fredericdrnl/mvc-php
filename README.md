@@ -18,5 +18,5 @@ For this project, I use PHP with Postgresql database.
 ## How to use ❓
 
 - First of all, create postgresql database with the commands on the *bdd.sql* file.
-- Then chnage the *$path* variable on the *path.php* file.
+- Then change the *$path* variable on the *path.php* file and also add your postgresql id on the *models/config-db.php*.
 - After for use this project you have to use the index.html page in your http request with on parameter ("controllers") the controller you want to see.
